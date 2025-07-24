@@ -1,0 +1,2 @@
+build:clang-time-trace --aspects=//example:clang_time_trace.bzl%clang_time_trace_aspect
+build:clang-time-trace --output_groups=clang_time_trace

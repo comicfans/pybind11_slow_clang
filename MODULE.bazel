@@ -1,0 +1,18 @@
+bazel_dep(name = "platforms", version = "0.0.10")
+
+
+
+http_archive = use_repo_rule("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+
+bazel_dep(name = "rules_cc", version = "0.1.2")
+
+bazel_dep(name = "bazel_skylib", version = "1.7.1")
+
+
+bazel_dep(name = "rules_python", version = "0.40.0")
+bazel_dep(name = "pybind11_bazel", version = "2.16.3")
+git_override(
+    module_name = "pybind11_bazel",
+    commit = "e442ea9aa37ce10860ee720a6eda507a40782ddb",
+    remote = "https://github.com/pybind/pybind11_bazel",
+)
